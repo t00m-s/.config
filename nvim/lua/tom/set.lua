@@ -44,3 +44,7 @@ vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true })
 
 -- Opens the file manager in nvim
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- Split windows management
+vim.keymap.set('n', '<leader>sv', vim.cmd.vsp)
+vim.keymap.set('n', '<leader>sh', vim.cmd.sp)
