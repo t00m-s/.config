@@ -21,7 +21,7 @@ paru -Sy dunst pipewire wireplumber
 	 qt5-wayland qt6-wayland polkit-kde-agent waybar grim swww wofi
 	 bluez bluez-utils xdg-user-dirs sddm-git ntp btop ttf-hack-nerd
 	 ripgrep reflector wl-clipboard bat the_silver_searcher
-     wget tmux
+     wget tmux ctags
 sudo systemctl enable nptd.service
 sudo systemctl enable bluetooth.service
 sudo systemctl enable sddm.service

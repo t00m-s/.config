@@ -13,9 +13,6 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    if packer_bootstrap then
-        require('packer').sync()
-    end
 
     use { -- Telescope
         'nvim-telescope/telescope.nvim', branch = '0.1.x',
@@ -118,12 +115,10 @@ return require('packer').startup(function(use)
 
     -- GitLens plugin for nvim (kind of)
     use {
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require('gitsigns').setup()
-        end
+        "f-person/git-blame.nvim",
     }
-
+    
+    -- Tree status bar
     use {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v2.x",
@@ -133,4 +128,17 @@ return require('packer').startup(function(use)
             "MunifTanjim/nui.nvim",
         }
     }
+
+    -- Generates tags for functions to quicky jump with F8
+    use {
+        "preservim/tagbar"
+    }
+
+    -- Comment and uncomment regions with gc or gcc
+    use {
+        "tpope/vim-commentary"
+    }
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
