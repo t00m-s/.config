@@ -108,4 +108,24 @@ return require('packer').startup(function(use)
             require('mini.pairs').setup()
         end
     }
+    -- Terminal popup
+    use {
+        "akinsho/toggleterm.nvim",
+        config = function()
+            require("toggleterm").setup()
+        end
+    }
+
+    -- GitLens plugin for nvim (kind of)
+    use {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
+
+    -- Code snippets
+    use {
+        "rafamadriz/friendly-snippets",
+    }
 end)
