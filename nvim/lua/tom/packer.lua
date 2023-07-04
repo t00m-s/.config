@@ -124,8 +124,13 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- Code snippets
     use {
-        "rafamadriz/friendly-snippets",
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v2.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "MunifTanjim/nui.nvim",
+        }
     }
 end)

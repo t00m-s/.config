@@ -48,3 +48,16 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- Split windows management
 vim.keymap.set('n', '<leader>sv', vim.cmd.vsp)
 vim.keymap.set('n', '<leader>sh', vim.cmd.sp)
+
+
+-- Resize windows size
+vim.api.nvim_set_keymap("n", "<Right>", ":vertical resize +5<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Left>", ":vertical resize -5<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Down>", ":horizontal resize -5<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Up>", ":horizontal resize +5<CR>", { noremap = true, silent = true })
+
+-- Switch to a different window
+vim.api.nvim_set_keymap("n", "<C-Left>", "<C-W>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Up>", "<C-W>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Down>", "<C-W>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Right>", "<C-W>l", { noremap = true, silent = true })

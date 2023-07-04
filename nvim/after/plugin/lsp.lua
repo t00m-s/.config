@@ -15,9 +15,6 @@ lsp.on_attach(function(client, bufnr)
     end, opts)
 end)
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-
 lsp.setup()
 -- You need to setup `cmp` after lsp-zero
 local cmp = require('cmp')
