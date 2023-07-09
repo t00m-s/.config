@@ -39,6 +39,8 @@ vim.api.nvim_set_keymap('n', '<leader>qq', ':q!<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>cc', '"+y', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>cv', '"+p', { noremap = true })
 
+vim.api.nvim_set_keymap('v', '<leader>cc', '"+y', { noremap = true })
+vim.api.nvim_set_keymap('v', '<leader>cv', '"+p', { noremap = true })
 -- When deleting with x, this does not save to registers
 vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true })
 

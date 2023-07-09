@@ -117,7 +117,7 @@ return require('packer').startup(function(use)
     use {
         "f-person/git-blame.nvim",
     }
-    
+
     -- Tree status bar
     use {
         "nvim-neo-tree/neo-tree.nvim",
@@ -138,6 +138,14 @@ return require('packer').startup(function(use)
     use {
         "tpope/vim-commentary"
     }
+
+    use {
+        'dgagn/diagflow.nvim',
+        config = function()
+            require('diagflow').setup()
+        end
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
