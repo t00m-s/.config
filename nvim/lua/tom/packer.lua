@@ -50,10 +50,10 @@ return require('packer').startup(function(use)
           -- LSP Support
           {'neovim/nvim-lspconfig'},             -- Required
           {                                      -- Optional
-          'williamboman/mason.nvim',
-          run = function()
-              pcall(vim.cmd, 'MasonUpdate')
-          end,
+              'williamboman/mason.nvim',
+               run = function()
+                   pcall(vim.cmd, 'MasonUpdate')
+               end,
       },
       {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
@@ -144,6 +144,10 @@ return require('packer').startup(function(use)
         config = function()
             require('diagflow').setup()
         end
+    }
+
+    use {
+        'onsails/lspkind.nvim'
     }
 
     if packer_bootstrap then
