@@ -10,9 +10,6 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-    vim.keymap.set("n", "<leader>=", function ()
-        vim.lsp.buf.format { async = true }
-    end, opts)
 end)
 
 lsp.setup()
@@ -21,6 +18,8 @@ local cmp = require('cmp')
 cmp.setup({
     sources = {
          { name = 'nvim_lsp'},
+         { name = 'luasnip_choice'},
+         { name = 'ctags' },
     },
     mapping = {
         -- Tab key to confirm completion

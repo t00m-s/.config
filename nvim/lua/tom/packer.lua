@@ -150,6 +150,19 @@ return require('packer').startup(function(use)
         'onsails/lspkind.nvim'
     }
 
+    use {
+        'doxnit/cmp-luasnip-choice',
+        config = function()
+            require('cmp_luasnip_choice').setup({
+                auto_open = true
+            })
+        end
+    }
+
+    use {
+        'delphinus/cmp-ctags'
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
