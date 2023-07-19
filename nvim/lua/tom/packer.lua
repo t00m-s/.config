@@ -163,6 +163,10 @@ return require('packer').startup(function(use)
         'delphinus/cmp-ctags'
     }
 
+    -- Multi-line editing with C-n
+    use {
+        'terryma/vim-multiple-cursors'
+    }
     if packer_bootstrap then
         require('packer').sync()
     end
