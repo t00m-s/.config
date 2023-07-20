@@ -90,21 +90,15 @@ return require('packer').startup(function(use)
     use {
         'nvim-tree/nvim-web-devicons'
     }
-    use {
-        "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-        config = function()
-            require("startup").setup()
-        end
-    }
 
-    -- Pais matching
+    -- Pairs matching
     use {
         'echasnovski/mini.nvim',
         config = function()
             require('mini.pairs').setup()
         end
     }
+
     -- Terminal popup
     use {
         "akinsho/toggleterm.nvim",
