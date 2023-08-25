@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 -- Set tab width to 4 spaces
 vim.opt.tabstop = 4
@@ -32,25 +32,24 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 -- Keybindings
 
-vim.api.nvim_set_keymap('n', '<leader>fs', ':w<CR>', { noremap = true, silent = true}) -- space fs to save file
-vim.api.nvim_set_keymap('n', '<leader>qq', ':q!<CR>', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>fs", ":w<CR>", { noremap = true, silent = true }) -- space fs to save file
+vim.api.nvim_set_keymap("n", "<leader>qq", ":q!<CR>", { noremap = true })
 
 -- Copy and paste to system clipboard
-vim.api.nvim_set_keymap('n', '<leader>cc', '"+y', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>cv', '"+p', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>cc", '"+y', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>cv", '"+p', { noremap = true })
 
-vim.api.nvim_set_keymap('v', '<leader>cc', '"+y', { noremap = true })
-vim.api.nvim_set_keymap('v', '<leader>cv', '"+p', { noremap = true })
+vim.api.nvim_set_keymap("v", "<leader>cc", '"+y', { noremap = true })
+vim.api.nvim_set_keymap("v", "<leader>cv", '"+p', { noremap = true })
 -- When deleting with x, this does not save to registers
-vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true })
+vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true })
 
 -- Opens the file manager in nvim
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Split windows management
-vim.keymap.set('n', '<leader>sv', vim.cmd.vsp)
-vim.keymap.set('n', '<leader>sh', vim.cmd.sp)
-
+vim.keymap.set("n", "<leader>sv", vim.cmd.vsp)
+vim.keymap.set("n", "<leader>sh", vim.cmd.sp)
 
 -- Resize windows size
 vim.api.nvim_set_keymap("n", "<Right>", ":vertical resize +5<CR>", { noremap = true, silent = true })
@@ -63,3 +62,6 @@ vim.api.nvim_set_keymap("n", "<C-Left>", "<C-W>h", { noremap = true, silent = tr
 vim.api.nvim_set_keymap("n", "<C-Up>", "<C-W>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-Down>", "<C-W>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-Right>", "<C-W>l", { noremap = true, silent = true })
+
+-- Font
+vim.o.guifont = "Fira Code"

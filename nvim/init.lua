@@ -1,2 +1,2 @@
-require("tom.packer")
+require("tom.lazy")
 require("tom.set")

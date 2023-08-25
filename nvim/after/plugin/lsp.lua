@@ -18,8 +18,6 @@ local cmp = require('cmp')
 cmp.setup({
     sources = {
          { name = 'nvim_lsp'},
-         { name = 'luasnip_choice'},
-         { name = 'ctags' },
     },
     mapping = {
         -- Tab key to confirm completion
