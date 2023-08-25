@@ -72,12 +72,8 @@
     	"on-click": "pavucontrol",
     	"format-icons": {
       	    	"headphone": "",
-      	    	"hands-free": "",
       		"headset": "",
-      		"phone": "",
-      		"portable": "",
-      		"car": "",
-      		"default": ["", "", "墳", ""]
+      		"default": ["", "", ""]
     	}
     },
     "custom/power": {
