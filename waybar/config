@@ -1,6 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30,
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces","hyprland/window"],
     "modules-center": ["clock", "keyboard-state"],
