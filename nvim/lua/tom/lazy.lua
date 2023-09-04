@@ -13,7 +13,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.opt.rtp:prepend(lazypath)
 return require("lazy").setup({
-
 	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
@@ -24,9 +23,9 @@ return require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		opts = {},
-        config = function()
-            vim.cmd[[colorscheme tokyonight]]
-        end
+		config = function()
+			vim.cmd([[colorscheme tokyonight]])
+		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter", -- Better syntax highlightings
@@ -78,5 +77,30 @@ return require("lazy").setup({
 	},
 	"onsails/lspkind.nvim",
 	"terryma/vim-multiple-cursors",
-    "elentok/format-on-save.nvim",
+	"elentok/format-on-save.nvim",
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
+	{
+		"m4xshen/smartcolumn.nvim",
+		opts = {},
+	},
+	{
+		"folke/twilight.nvim",
+		opts = {},
+	},
+	{
+		"brenoprata10/nvim-highlight-colors",
+		opts = {},
+	},
+	{
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup()
+		end,
+	},
+	"lambdalisue/suda.vim",
 })

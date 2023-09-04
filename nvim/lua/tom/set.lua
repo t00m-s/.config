@@ -33,8 +33,8 @@ vim.opt.colorcolumn = "80"
 -- Keybindings
 
 vim.api.nvim_set_keymap("n", "<leader>fs", ":w<CR>", { noremap = true, silent = true }) -- space fs to save file
-vim.api.nvim_set_keymap("n", "<leader>qq", ":q!<CR>", { noremap = true })
-
+vim.api.nvim_set_keymap("n", "<leader>q", ":q<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>qa", ":qa!<CR>", { noremap = true })
 -- Copy and paste to system clipboard
 vim.api.nvim_set_keymap("n", "<leader>cc", '"+y', { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>cv", '"+p', { noremap = true })
