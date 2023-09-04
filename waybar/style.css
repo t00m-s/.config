@@ -61,7 +61,8 @@ tooltip {
 #cpu,
 #memory,
 #keyboard-state,
-#language{
+#language,
+#window {
   background: #1e1e2e;
   padding: 0px 10px;
   margin: 3px 0px;
@@ -80,7 +81,7 @@ tooltip {
   margin-left: 5px;
 }
 
-#clock { 
+#clock {
   color: #f9e2af;
   border-radius: 10px 0px 0px 10px;
 }
@@ -96,22 +97,26 @@ tooltip {
 }
 
 #battery {
-  color:  #a6e3a1;
+  color: #a6e3a1;
 }
 
-#backlight{
+#backlight {
   color: #cba6f7;
 }
 
-#custom-power{
+#custom-power {
   color: #a6adc8;
   background: #1e1e2e;
   border-radius: 0 10px 10px 0;
-  margin-right: 5px;  
+  margin-right: 5px;
 }
 
-#keyboard-state{ 
- border-radius: 0px 10px 10px 0px;
- margin-left: 0px;
+#keyboard-state {
+  margin-left: 0px;
+  border-radius: 0px 10px 10px 0px;
 }
 
+#window {
+  margin-left: 3px;
+  border-radius: 10px 10px 10px 10px;
+}

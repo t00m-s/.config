@@ -2,25 +2,31 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces"], 
+    "modules-left": ["wlr/workspaces","hyprland/window"],
     "modules-center": ["clock", "keyboard-state"],
     "modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight","battery", "custom/power"],
-    // Modules configuration 
+    // Modules configuration
     "wlr/workspaces": {
-	    "on-click": "activate",
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "keyboard-state": {
     	"numlock": true,
     	"capslock": true,
     	"format": {
         	"numlock": " N {icon}",
-        	"capslock": "C {icon}"                            
+        	"capslock": "C {icon}"
     	},
     	"format-icons": {
         	"locked": "\uf023",
         	"unlocked": "\uf09c"
     	}
    },
+    "hyprland/window": {
+        "max-length": 200,
+        "separate-outputs": true
+    },
    "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
@@ -82,5 +88,3 @@
 	"tooltip": false,
     }
 }
-
-
