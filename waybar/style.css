@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-  background: transparent;
+  background: #1e1e2e;
   color: #cdd6f4;
 }
 
@@ -63,37 +63,19 @@ tooltip {
 #keyboard-state,
 #language,
 #window {
-  background: #1e1e2e;
   padding: 0px 10px;
   margin: 3px 0px;
 }
-
-#tray {
-  border-radius: 10px 0px 0px 10px;
-  margin-right: 0px;
-}
-
-#workspaces {
-  background: #1e1e2e;
-  border-radius: 10px;
-  padding-right: 0px;
-  padding-left: 5px;
-  margin-left: 5px;
-}
-
 #clock {
   color: #f9e2af;
-  border-radius: 10px 0px 0px 10px;
 }
 
 #network {
   color: #fab387;
-  border-radius: 0px 0px 0px 0px;
 }
 
 #pulseaudio {
   color: #89b4fa;
-  border-radius: 0px 0px 0px 0px;
 }
 
 #battery {
@@ -106,17 +88,5 @@ tooltip {
 
 #custom-power {
   color: #a6adc8;
-  background: #1e1e2e;
-  border-radius: 0 10px 10px 0;
   margin-right: 5px;
-}
-
-#keyboard-state {
-  margin-left: 0px;
-  border-radius: 0px 10px 10px 0px;
-}
-
-#window {
-  margin-left: 3px;
-  border-radius: 10px 10px 10px 10px;
 }

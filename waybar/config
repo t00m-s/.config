@@ -1,14 +1,12 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 30,
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces","hyprland/window"],
+    "modules-left": ["hyprland/workspaces","hyprland/window"],
     "modules-center": ["clock", "keyboard-state"],
     "modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight","battery", "custom/power"],
     // Modules configuration
-    "wlr/workspaces": {
-        "format": "{icon}",
+    "hyprland/workspaces": {
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
@@ -25,7 +23,7 @@
     	}
    },
     "hyprland/window": {
-        "max-length": 200,
+        "max-length": 100,
         "separate-outputs": true
     },
    "clock": {
