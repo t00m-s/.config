@@ -7,9 +7,7 @@ format_on_save.setup({
 		"/node_modules/",
 		".local/share/nvim/lazy",
 		"/.git/",
-		"*.conf",
 	},
-	error_notifier = message_buffer,
 	experiments = {
 		partial_update = "diff", -- or 'line-by-line'
 	},
@@ -17,16 +15,11 @@ format_on_save.setup({
 	formatter_by_ft = {
 		python = formatters.black,
 		lua = formatters.stylua,
-		htmldjango = {
-			formatters.remove_trailing_whitespace,
-			formatters.remove_trailing_newlines,
-			formatters.lsp,
-		},
 	},
 	fallback_formatter = {
 		formatters.remove_trailing_whitespace,
 		formatters.remove_trailing_newlines,
-		formatters.prettierd,
+		formatters.lsp,
 	},
 	run_with_sh = false,
 })

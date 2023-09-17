@@ -27,6 +27,7 @@ return require("lazy").setup({
 			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
+	"shaunsingh/solarized.nvim",
 	{
 		"nvim-treesitter/nvim-treesitter", -- Better syntax highlightings
 		config = function()
@@ -38,7 +39,7 @@ return require("lazy").setup({
 	"tpope/vim-fugitive",
 	{
 		"VonHeikemen/lsp-zero.nvim",
-		branch = "v2.x",
+		branch = "v3.x",
 		dependencies = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" }, -- Required
@@ -63,26 +64,22 @@ return require("lazy").setup({
 	-- Terminal popup
 	{
 		"akinsho/toggleterm.nvim",
-		config = function()
-			require("toggleterm").setup()
-		end,
+		version = "*",
+		opts = {},
 	},
 	"f-person/git-blame.nvim",
 	"tpope/vim-commentary",
 	{
 		"dgagn/diagflow.nvim",
-		config = function()
-			require("diagflow").setup()
-		end,
+		event = "LspAttach",
+		opts = {},
 	},
 	"onsails/lspkind.nvim",
 	"terryma/vim-multiple-cursors",
 	"elentok/format-on-save.nvim",
 	{
 		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup()
-		end,
+		opts = {},
 	},
 	{
 		"m4xshen/smartcolumn.nvim",

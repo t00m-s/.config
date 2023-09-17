@@ -1,9 +1,9 @@
 # Install git
 sudo pacman -Sy git
 # Install Hyprland
-paru -Sy gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms 
-	 libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols 
-	 cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff 
+paru -Sy gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms
+	 libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols
+	 cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff
 	 libdisplay-info cpio gtk3 kitty
 mkdir Development && cd Development
 git clone --recursive https://github.com/hyprwm/Hyprland
@@ -16,8 +16,8 @@ cd auto-cpufreq && sudo ./auto-cpufreq-installer
 sudo auto-cpufreq --install
 
 # Hyprland apps
-paru -Sy dunst pipewire wireplumber 
-	 xdg-desktop-portal-hyprland 
+paru -Sy dunst pipewire wireplumber
+	 xdg-desktop-portal-hyprland
 	 qt5-wayland qt6-wayland polkit-kde-agent waybar grim swww wofi
 	 bluez bluez-utils xdg-user-dirs sddm-git ntp btop ttf-hack-nerd
 	 ripgrep reflector wl-clipboard bat the_silver_searcher
@@ -27,5 +27,4 @@ sudo systemctl enable bluetooth.service
 sudo systemctl enable sddm.service
 xdg-user-dirs-update
 # Add Config from must-have Hyprland page
-# Find random wallpaper from swww 
-
+# Find random wallpaper from swww
