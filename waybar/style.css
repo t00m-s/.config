@@ -62,7 +62,8 @@ tooltip {
 #memory,
 #keyboard-state,
 #language,
-#window {
+#window,
+#custom-spotify {
   padding: 0px 10px;
   margin: 3px 0px;
 }

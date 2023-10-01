@@ -1,90 +1,120 @@
 {
-  "layer": "top", // Waybar at top layer
-  "position": "top", // Waybar position (top|bottom|left|right)
-  // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock", "keyboard-state"],
-  "modules-right": [
-    "network",
-    "tray",
-    "pulseaudio",
-    "cpu",
-    "memory",
-    "temperature",
-    "backlight",
-    "battery",
-    "custom/power"
-  ],
-  // Modules configuration
-  "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1"
-  },
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": {
-      "numlock": " N {icon}",
-      "capslock": "C {icon}"
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window",
+        "custom/spotify"
+    ],
+    "modules-center": [
+        "clock",
+        "keyboard-state"
+    ],
+    "modules-right": [
+        "network",
+        "tray",
+        "pulseaudio",
+        "cpu",
+        "temperature",
+        "backlight",
+        "battery",
+        "custom/power"
+    ],
+    // Modules configuration
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 /home/tom/.config/waybar/scripts/mediaplayer.py --player spotify",
+        "format": "{} \uf1bc",
+        "return-type": "json",
+        "on-click": "playerctl play-pause"
     },
-    "format-icons": {
-      "locked": "\uf023",
-      "unlocked": "\uf09c"
-    }
-  },
-  "hyprland/window": {
-    "max-length": 100,
-    "separate-outputs": true
-  },
-  "clock": {
-    "format": "{:%Y-%m-%d %H:%M}"
-  },
-  "cpu": {
-    "format": "{avg_frequency} GHz \uf4bc"
-  },
-  "memory": {
-    "format": "{}% \ue266"
-  },
-  "temperature": {
-    "critical-threshold": 85,
-    "format": "{temperatureC}°C"
-  },
-  "backlight": {
-    "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
-    "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% \udb80\udc84",
-    "format-plugged": "{capacity}% \uf1e6",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": " Muted",
-    "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "format-icons": {
-      "headphone": "",
-      "headset": "",
-      "default": ["", "", ""]
-    }
-  },
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "wlogout",
-    "tooltip": false
-  },
-  "network": {
-    "format": "{bandwidthDownBytes} \uf409 {bandwidthUpBytes} \uf40a",
-    "interval": 1,
-    "on-click": "nm-connection-editor",
-    "tooltip": false
-  },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": {
+            "numlock": " N {icon}",
+            "capslock": "C {icon}"
+        },
+        "format-icons": {
+            "locked": "\uf023",
+            "unlocked": "\uf09c"
+        }
+    },
+    "hyprland/window": {
+        "max-length": 100,
+        "separate-outputs": true
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}"
+    },
+    "cpu": {
+        "format": "{avg_frequency} GHz \uf4bc",
+        "on-click": "cpupower-gui",
+    },
+    "temperature": {
+        "critical-threshold": 85,
+        "format": "{temperatureC}°C"
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% \udb80\udc84",
+        "format-plugged": "{capacity}% \uf1e6",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "format-icons": {
+            "headphone": "",
+            "headset": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+    "network": {
+        "format": "{bandwidthDownBytes} \uf409 {bandwidthUpBytes} \uf40a",
+        "interval": 1,
+        "on-click": "nm-connection-editor",
+        "tooltip": false
+    },
 }
