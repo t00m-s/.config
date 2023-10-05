@@ -114,7 +114,6 @@
     "network": {
         "format": "{bandwidthDownBytes} \uf409 {bandwidthUpBytes} \uf40a",
         "interval": 1,
-        "on-click": "nm-connection-editor",
         "tooltip": false
     },
 }
