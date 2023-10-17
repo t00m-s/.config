@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -9,8 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.opt.rtp:prepend(lazypath)
 return require("lazy").setup({
 	{
@@ -103,4 +103,14 @@ return require("lazy").setup({
 	},
 	"lambdalisue/suda.vim",
 	"xiyaowong/transparent.nvim",
+	"github/copilot.vim",
+	{
+		"akinsho/flutter-tools.nvim",
+		lazy = false,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+		config = true,
+	},
 })
