@@ -50,14 +50,15 @@ require('lazy').setup({
     },
   },
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',    opts = {} },
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme rose-pine")
-    end
+      require("tokyonight").setup({ transparent = true })
+      vim.cmd("colorscheme tokyonight-storm")
+    end,
   },
   {
     -- Set lualine as statusline
@@ -98,7 +99,7 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
   "lambdalisue/suda.vim",
-  "xiyaowong/transparent.nvim",
+  -- "xiyaowong/transparent.nvim",
   {
     'akinsho/flutter-tools.nvim',
     lazy = false,
@@ -178,11 +179,20 @@ require('lazy').setup({
     end,
   },
   "f-person/git-blame.nvim",
+  -- Terminal popup
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
   {
-    "ggandor/leap.nvim",
+    "xiyaowong/transparent.nvim",
+    opts = {},
+  },
+  {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     config = function()
-      require("leap").add_default_mappings()
-    end
+      require("lsp_lines").setup()
+      vim.diagnostic.config({
+        virtual_text = false,
+      })
+    end,
   },
 }, {})
 
@@ -545,6 +555,7 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
