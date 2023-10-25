@@ -14,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  { import = "custom.plugins" },
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -50,7 +51,7 @@ require('lazy').setup({
     },
   },
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',    opts = {} },
+  { 'folke/which-key.nvim',   opts = {} },
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -99,10 +100,10 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
   "lambdalisue/suda.vim",
-  -- "xiyaowong/transparent.nvim",
+  "xiyaowong/transparent.nvim",
   {
     'akinsho/flutter-tools.nvim',
-    lazy = false,
+    lazy = true,
     dependencies = {
       'nvim-lua/plenary.nvim',
       'stevearc/dressing.nvim', -- optional for vim.ui.select
@@ -186,15 +187,41 @@ require('lazy').setup({
     opts = {},
   },
   {
-    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    config = function()
-      require("lsp_lines").setup()
-      vim.diagnostic.config({
-        virtual_text = false,
-      })
-    end,
-  },
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      lsp = {
+        override = {
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
+          ["cmp.entry.get_documentation"] = true,
+        },
+      },
+      presets = {
+        bottom_search = true,         -- use a classic bottom cmdline for search
+        command_palette = true,       -- position the cmdline and popupmenu together
+        long_message_to_split = true, -- long messages will be sent to a split
+        inc_rename = false,           -- enables an input dialog for inc-rename.nvim
+        lsp_doc_border = false,       -- add a border to hover docs and signature help
+      }
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    }
+  }
 }, {})
+
+-- [[Neovide settings]]
+if vim.g.neovide then
+  vim.o.guifont = "Fira Code Nerd Font:h14"
+  vim.g.neovide_theme = 'auto'
+  vim.g.neovide_transparency = 0.5
+  vim.g.transparency = 0.8
+  vim.cmd("TransparentDisable")
+else
+  vim.cmd("TransparentEnable")
+end
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -327,9 +354,11 @@ vim.keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, { de
 -- See `:help nvim-treesitter`
 -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
 vim.defer_fn(function()
-  require('nvim-treesitter.configs').setup {
+  require('nvim-treesitter.configs').setup({
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'vimdoc', 'vim' },
+    ignore_install = {},
+    sync_install = false,
+    ensure_installed = {},
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = true,
@@ -389,7 +418,7 @@ vim.defer_fn(function()
         },
       },
     },
-  }
+  })
 end, 0)
 
 -- Diagnostic keymaps
