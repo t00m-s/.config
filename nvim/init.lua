@@ -14,11 +14,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  { import = "custom.plugins" }
+  { import = 'custom.plugins' },
 }, {})
-require("custom.settings")
-require("custom.autogrups")
-require("custom.bindings")
+require 'custom.settings'
+require 'custom.autogrups'
+require 'custom.bindings'
 vim.cmd [[colorscheme tokyonight]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`

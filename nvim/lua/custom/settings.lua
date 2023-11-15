@@ -1,6 +1,7 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+
 -- Set highlight on search
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -12,7 +13,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.scrolloff = 8
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = '100'
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
@@ -22,7 +23,7 @@ vim.o.breakindent = true
 -- Save undo history
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+vim.opt.undodir = os.getenv 'HOME' .. '/.nvim/undodir'
 vim.opt.undofile = true
 
 -- Keep signcolumn on by default

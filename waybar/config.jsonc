@@ -9,7 +9,8 @@
     ],
     "modules-center": [
         "clock",
-        "keyboard-state"
+        "keyboard-state",
+        "hyprland/language",
     ],
     "modules-right": [
         "network",
@@ -32,12 +33,15 @@
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
+    "hyprland/langauge": {
+        "format": "{short}",
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
         "format": {
-            "numlock": " N {icon}",
-            "capslock": "C {icon}"
+            "numlock": "N {icon}",
+            "capslock": "C {icon} ",
         },
         "format-icons": {
             "locked": "\uf023",
