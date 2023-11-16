@@ -45,4 +45,10 @@ cmp.setup {
     { name = 'luasnip' },
     { name = 'copilot' },
   },
+  window = {
+    completion = {
+      completion = cmp.config.window.bordered(),
+      window = cmp.config.window.bordered(),
+    },
+  },
 }
