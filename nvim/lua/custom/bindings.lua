@@ -12,10 +12,7 @@ nvim_set_keymap('v', '<leader>cc', '"+y', { noremap = true })
 nvim_set_keymap('v', '<leader>cv', '"+p', { noremap = true })
 
 -- When deleting with x, this does not save to registers
-nvim_set_keymap('n', 'x', '"_x', { noremap = true })
-
--- Opens the file manager in nvim
-vim_keymap_set('n', '<leader>pv', vim.cmd.Ex)
+nvim_set_keymap('n', 'x', '"_x', opts)
 
 -- Split windows management
 vim_keymap_set('n', '<leader>sv', vim.cmd.vsp)
@@ -28,12 +25,12 @@ nvim_set_keymap('n', '<Up>', ':horizontal resize +5<CR>', opts)
 
 -- Switch to a different window
 nvim_set_keymap('n', '<C-Left>', '<C-W>h', opts)
-nvim_set_keymap('n', '<C-Up>', '<C-W>j', opts)
-nvim_set_keymap('n', '<C-Down>', '<C-W>k', opts)
+nvim_set_keymap('n', '<C-Up>', '<C-W>k', opts)
+nvim_set_keymap('n', '<C-Down>', '<C-W>j', opts)
 nvim_set_keymap('n', '<C-Right>', '<C-W>l', opts)
 
 -- Space is now only used as a leader key
-vim_keymap_set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim_keymap_set({ 'n', 'v' }, '<Space>', '<Nop>', opts)
 
 -- Remap for dealing with word wrap
 vim_keymap_set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
