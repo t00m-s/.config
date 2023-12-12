@@ -34,14 +34,14 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "hyprland/langauge": {
-        "format": "{short}",
+        "format": "{short}"
     },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
         "format": {
             "numlock": "N {icon}",
-            "capslock": "C {icon} ",
+            "capslock": "C {icon} "
         },
         "format-icons": {
             "locked": "\uf023",
@@ -49,15 +49,15 @@
         }
     },
     "hyprland/window": {
-        "max-length": 100,
+        "max-length": 50,
         "separate-outputs": true
     },
     "clock": {
         "format": "{:%Y-%m-%d %H:%M}"
     },
     "cpu": {
-        "format": "{avg_frequency} GHz \uf4bc",
-        "on-click": "cpupower-gui",
+        "format": "{avg_frequency} GHz",
+        "on-click": "cpupower-gui"
     },
     "temperature": {
         "critical-threshold": 85,
@@ -119,5 +119,5 @@
         "format": "{bandwidthDownBytes} \uf409 {bandwidthUpBytes} \uf40a",
         "interval": 1,
         "tooltip": false
-    },
+    }
 }
