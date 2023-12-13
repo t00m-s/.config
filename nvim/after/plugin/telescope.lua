@@ -13,6 +13,7 @@ require('telescope').setup {
 local telescope = require 'telescope'
 pcall(telescope.load_extension, 'fzf')
 telescope.load_extension 'project'
+telescope.load_extension 'notify'
 -- require('telescope').load_extension 'project'
 local telescope_builtin = require 'telescope.builtin'
 -- See `:help telescope.builtin`
@@ -22,5 +23,3 @@ vim.keymap.set('n', '<leader><leader>', telescope_builtin.buffers, { desc = '[ ]
 vim.keymap.set('n', '<leader>gf', telescope_builtin.git_files, { desc = 'Search [G]it [F]iles' })
 vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, { desc = '[F]ind [F]iles' })
 vim.keymap.set('n', '<leader>fw', telescope_builtin.grep_string, { desc = '[F]ind [W]ord' })
-
-vim.api.nvim_set_keymap('n', '<C-p>', ":lua require'telescope'.extensions.project.project{}<CR>", { desc = '<C> [P]rojects', noremap = true, silent = true })
