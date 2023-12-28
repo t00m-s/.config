@@ -8,12 +8,12 @@ vim.defer_fn(function()
     sync_install = false,
     ensure_installed = {},
 
-    -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
-    auto_install = true,
-
     highlight = {
       enable = true,
       disable = function(lang, buf)
+        if lang == 'dart' then
+          return true
+        end
         local max_filesize = 1000 * 1024 -- 1 MB
         local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
         if ok and stats and stats.size > max_filesize then
