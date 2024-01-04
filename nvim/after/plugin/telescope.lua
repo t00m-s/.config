@@ -12,7 +12,6 @@ require('telescope').setup {
 -- Enable telescope fzf native, if installed
 local telescope = require 'telescope'
 pcall(telescope.load_extension, 'fzf')
-telescope.load_extension 'project'
 telescope.load_extension 'notify'
 -- require('telescope').load_extension 'project'
 local telescope_builtin = require 'telescope.builtin'

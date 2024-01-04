@@ -12,27 +12,34 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath)
-
+local opts = {
+  checker = {
+    enabled = true,
+    notify = true,
+    frequency = 86400,
+  },
+}
 require('lazy').setup({
-  { import = 'custom.plugins' },
-}, {})
+  {
+    import = 'custom.plugins',
+  },
+}, opts)
 require 'custom.settings'
 require 'custom.autogrups'
 require 'custom.bindings'
-vim.cmd [[colorscheme rose-pine]]
+vim.cmd [[colorscheme NeoSolarized]]
 if vim.g.neovide then
-  vim.o.guifont = 'JetbrainsMono Nerd Font:h15'
+  vim.o.guifont = 'JetbrainsMono Nerd Font:h14'
 
   -- Helper function for transparency formatting
   local alpha = function()
-    return string.format('%x', math.floor(255 * vim.g.transparency or 0.8))
+    return string.format('%x', math.floor(255 * (vim.g.transparency or 0.8)))
   end
-  -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
-  vim.g.neovide_transparency = 0.7
-  vim.g.transparency = 0.7
+  vim.g.neovide_transparency = 0.85
+  vim.g.transparency = 0.85
   vim.g.neovide_background_color = '#0f1117' .. alpha()
-  vim.g.neovide_fullscreen = true
   vim.g.neovide_theme = 'auto'
+  vim.g.neovide_hide_mouse_when_typing = true
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`

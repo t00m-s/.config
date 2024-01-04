@@ -3,17 +3,13 @@
 -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
-    -- Add languages to be installed here that you want installed for treesitter
     ignore_install = {},
-    sync_install = false,
-    ensure_installed = {},
+    sync_install = true,
+    ensure_installed = { 'vim', 'regex', 'lua', 'bash', 'markdown', 'markdown_inline' },
 
     highlight = {
       enable = true,
       disable = function(lang, buf)
-        if lang == 'dart' then
-          return true
-        end
         local max_filesize = 1000 * 1024 -- 1 MB
         local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
         if ok and stats and stats.size > max_filesize then
