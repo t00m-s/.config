@@ -7,7 +7,7 @@
     "gtk-layer-shell": true,
     "height": 30,
     "modules-left": ["clock","hyprland/window"],
-    "modules-center": [],
+    "modules-center": ["wlr/workspaces"],
     "modules-right": ["temperature","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
         "format": "{}"
@@ -17,18 +17,6 @@
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
-        }
     },
     "tray": {
         "icon-size": 15,
@@ -91,12 +79,12 @@
         "scroll-step": 5
     },
     
-    //"temperature": {
-        //"thermal-zone": 1,
-        //"format": "{temperatureF}°F ",
-        //"critical-threshold": 80,
-        //"format-critical": "{temperatureC}°C "
-    //},
+    "temperature": {
+        "thermal-zone": 1,
+        "format": "{temperatureC}°C ",
+        "critical-threshold": 90,
+        "format-critical": "{temperatureC}°C "
+    },
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
