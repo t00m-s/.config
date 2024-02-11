@@ -27,6 +27,7 @@ require('lazy').setup({
     border = 'rounded',
   },
 })
+vim.cmd [[set clipboard=unnamedplus]]
 require 'custom.settings'
 require 'custom.autogrups'
 require 'custom.bindings'

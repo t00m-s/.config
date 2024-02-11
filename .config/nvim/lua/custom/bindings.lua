@@ -5,27 +5,12 @@ vim_keymap_set('n', '<leader>q', ':q<CR>', { noremap = true, silent = true, desc
 vim_keymap_set('n', '<leader>wa', ':wa<CR>', { noremap = true, silent = true, desc = '[W]rite [A]ll' })
 vim_keymap_set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = '[W]rite' })
 vim_keymap_set('n', '<leader>wq', ':wq<CR>', { noremap = true, silent = true, desc = '[W]rite and [Q]uit' })
--- Copy and paste to system clipboard
-vim_keymap_set({ 'n', 'v' }, '<leader>cc', '"+y', { noremap = true, silent = true, desc = '[C]opy [C]lipboard' })
-vim_keymap_set({ 'n', 'v' }, '<leader>cv', '"+p', { noremap = true, silent = true, desc = '[C]opy [V]' })
-
 -- When deleting with x, this does not save to registers
 vim_keymap_set('n', 'x', '"_x', { noremap = true, silent = true })
 
 -- Split windows management
 vim_keymap_set('n', '<leader>sv', '<CMD>vsp<CR>', { noremap = true, silent = true, desc = '[S]plit [V]ertical' })
 vim_keymap_set('n', '<leader>sh', '<CMD>sp<CR>', { noremap = true, silent = true, desc = '[S]plit [H]orizontal' })
--- Resize windows size
-vim_keymap_set('n', '<Right>', ':vertical resize +5<CR>', { noremap = true, silent = true })
-vim_keymap_set('n', '<Left>', ':vertical resize -5<CR>', { noremap = true, silent = true })
-vim_keymap_set('n', '<Down>', ':horizontal resize -5<CR>', { noremap = true, silent = true })
-vim_keymap_set('n', '<Up>', ':horizontal resize +5<CR>', { noremap = true, silent = true })
-
--- Switch to a different window
-vim_keymap_set('n', '<C-Left>', '<C-W>h', { noremap = true, silent = true })
-vim_keymap_set('n', '<C-Up>', '<C-W>k', { noremap = true, silent = true })
-vim_keymap_set('n', '<C-Down>', '<C-W>j', { noremap = true, silent = true })
-vim_keymap_set('n', '<C-Right>', '<C-W>l', { noremap = true, silent = true })
 
 -- Space is now only used as a leader key
 vim_keymap_set({ 'n', 'v' }, '<Space>', '<Nop>', { noremap = true, silent = true })
@@ -42,8 +27,6 @@ vim_keymap_set('n', '<leader>oe', vim.diagnostic.open_float, { noremap = true, s
 -- Select all
 vim_keymap_set('n', '<C-a>', 'ggVG', { desc = 'Select all' })
 -- Move block of text in visual mode
--- vim_keymap_set('n', '<C-j>', ':m .+1<CR>==', { noremap = true, silent = true })
--- vim_keymap_set('n', '<C-k>', ':m .-2<CR>==', { noremap = true, silent = true })
 vim_keymap_set('i', '<C-j>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
 vim_keymap_set('i', '<C-k>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
 vim_keymap_set('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
