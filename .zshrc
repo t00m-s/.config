@@ -115,3 +115,5 @@ export NVM_DIR="$HOME/.nvm"
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
+
+export PATH=$PATH:$HOME/.local/share/bob/nvim-bin

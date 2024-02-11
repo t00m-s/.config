@@ -1,5 +1,5 @@
 [default]
-path = "/home/tommaso/Wallpapers/"
+path = "/home/tom/Wallpapers/"
 duration = "10m"
 sorting = "random"
 apply-shadow = true
