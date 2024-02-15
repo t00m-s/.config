@@ -6,17 +6,17 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 30,
-    "modules-left": ["clock","hyprland/window"],
-    "modules-center": [],
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["clock"],
     "modules-right": ["temperature","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
-        "format": "{}"
+        "format": "{}",
+        "separate-outputs": true,
     },
     "tray": {
         "icon-size": 15,
         "spacing": 10
     },
-
     "clock": {
         "format": "{: %I:%M %p   %a, %b %e}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
@@ -48,7 +48,8 @@
         "format": "{icon} {volume}%",
         "tooltip": false,
         "format-muted": " Muted",
-        "on-click": "pamixer -t",
+        "on-double-click": "pamixer -t",
+        "on-click": "pavucontrol",
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5",
         "scroll-step": 5,
@@ -81,7 +82,6 @@
     },
 
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
