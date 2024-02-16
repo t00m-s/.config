@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-# Preferred editor for local and remote sessions
+# If you are using ssh, $EDITOR will be set to 'vim'
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
@@ -105,7 +105,9 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias ls="eza"
+alias l="eza -la"
+alias cd="z"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -117,3 +119,4 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 fi
 
 export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
+eval "$(zoxide init zsh)"
