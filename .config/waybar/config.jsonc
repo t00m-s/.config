@@ -5,10 +5,14 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 30,
-    "modules-left": ["hyprland/window"],
+    "modules-left": ["hyprland/workspaces","hyprland/window"],
     "modules-center": ["clock"],
     "modules-right": ["temperature","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
+    "hyprland/workspaces":{
+        "format": "{}",
+         "on-scroll-up": "hyprctl dispatch workspace e+1",
+         "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true,
