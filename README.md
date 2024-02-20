@@ -12,3 +12,10 @@ Clone this repo, cd into it and then
 ```
 stow .
 ```
+## Step 3
+If you are setting up for CTF i suggest setting up PEDA
+```
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+echo "DONE! debug your program with gdb and enjoy"
+```
