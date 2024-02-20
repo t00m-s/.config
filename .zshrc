@@ -108,6 +108,7 @@ fi
 alias ls="eza"
 alias l="eza -la"
 alias cd="z"
+alias lg="lazygit"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -119,4 +120,6 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 fi
 
 export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
+export PATH=$PATH:$HOME/.cargo/bin
+
 eval "$(zoxide init zsh)"
