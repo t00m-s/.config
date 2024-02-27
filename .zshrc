@@ -109,6 +109,7 @@ alias ls="eza"
 alias l="eza -la"
 alias cd="z"
 alias lg="lazygit"
+alias cl="clear"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -123,3 +124,7 @@ export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
 export PATH=$PATH:$HOME/.cargo/bin
 
 eval "$(zoxide init zsh)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
