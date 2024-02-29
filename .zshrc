@@ -109,6 +109,7 @@ alias ls="eza"
 alias l="eza -la"
 alias cd="z"
 alias lg="lazygit"
+alias ld="lazydocker"
 alias cl="clear"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
