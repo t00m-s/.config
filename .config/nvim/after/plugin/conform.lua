@@ -6,6 +6,7 @@ require('conform').setup {
     python = { 'ruff' },
     typescript = { 'prettier' },
     javascript = { 'prettier' },
+    html = { 'prettier' },
   },
   format_on_save = {
     -- These options will be passed to conform.format()

@@ -4,9 +4,7 @@ return {
   priority = 1000,
   config = function()
     vim.o.background = 'dark' -- or 'light'
-    require('solarized').setup {
-      transparent = true,
-    }
+    require('solarized').setup {}
     vim.cmd.colorscheme 'solarized'
   end,
 }
