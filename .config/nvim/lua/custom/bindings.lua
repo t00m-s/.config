@@ -27,7 +27,3 @@ vim_keymap_set('n', '<leader>oe', vim.diagnostic.open_float, { noremap = true, s
 -- Select all
 vim_keymap_set('n', '<C-a>', 'ggVG', { desc = 'Select all' })
 -- Move block of text in visual mode
-vim_keymap_set('i', '<A-j>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
-vim_keymap_set('i', '<A-k>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
-vim_keymap_set('v', '<A-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
-vim_keymap_set('v', '<A-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })

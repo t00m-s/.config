@@ -39,7 +39,6 @@ require('mason-lspconfig').setup {
   ensure_installed = {},
   handlers = {
     lsp_zero.default_setup,
-    jdtls = lsp_zero.noop,
     lua_ls = function()
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
@@ -56,7 +55,6 @@ cmp.setup {
     { name = 'nvim_lua' },
     { name = 'luasnip', keyword_length = 2 },
     { name = 'buffer', keyword_length = 3 },
-    { name = 'copilot' },
   },
   formatting = {
     fields = { 'abbr', 'kind', 'menu' },

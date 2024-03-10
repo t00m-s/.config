@@ -1,6 +1,0 @@
--- require('flutter-tools').setup {
---   flutter_path = '/usr/bin/dart',
---   lsp = {
---     capabilities = require('lsp-zero').get_capabilities(),
---   },
--- }
