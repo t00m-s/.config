@@ -32,6 +32,20 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set('i', '<C-h>', function()
     vim.lsp.buf.signature_help()
   end, { buffer = bufnr, remap = false, desc = 'Signature Help' })
+  -- Basically this is just for typescript.
+  vim.lsp.handlers['textDocument/hover'] = function(_, result, ctx, config)
+    config = config or {}
+    config.focus_id = ctx.method
+    if not (result and result.contents) then
+      return
+    end
+    local markdown_lines = vim.lsp.util.convert_input_to_markdown_lines(result.contents)
+    markdown_lines = vim.lsp.util.trim_empty_lines(markdown_lines)
+    if vim.tbl_isempty(markdown_lines) then
+      return
+    end
+    return vim.lsp.util.open_floating_preview(markdown_lines, 'markdown', config)
+  end
 end)
 
 require('mason').setup {}
@@ -48,7 +62,14 @@ require('mason-lspconfig').setup {
 
 local cmp = require 'cmp'
 local cmp_action = lsp_zero.cmp_action()
+local lspkind = require 'lspkind'
+local cmp_ap = require 'nvim-autopairs.completion.cmp'
 cmp.setup {
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
   sources = {
     { name = 'path' },
     { name = 'nvim_lsp' },
@@ -57,13 +78,13 @@ cmp.setup {
     { name = 'buffer', keyword_length = 3 },
   },
   formatting = {
-    fields = { 'abbr', 'kind', 'menu' },
-    format = require('lspkind').cmp_format {
-      mode = 'symbol_text',
+    format = lspkind.cmp_format {
+      mode = 'symbol', -- show only symbol annotations
       maxwidth = function()
         return math.floor(0.45 * vim.o.columns)
       end,
-      ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+      ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+      show_labelDetails = true, -- show labelDetails in menu. Disabled by default
     },
   },
   mapping = cmp.mapping.preset.insert {
@@ -77,4 +98,5 @@ cmp.setup {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
+  cmp.event:on('confirm_done', cmp_ap.on_confirm_done()),
 }

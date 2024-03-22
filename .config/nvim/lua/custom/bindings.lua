@@ -7,7 +7,8 @@ vim_keymap_set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc
 vim_keymap_set('n', '<leader>wq', ':wq<CR>', { noremap = true, silent = true, desc = '[W]rite and [Q]uit' })
 -- When deleting with x, this does not save to registers
 vim_keymap_set('n', 'x', '"_x', { noremap = true, silent = true })
-
+-- Format pasted line
+vim_keymap_set({ 'n' }, 'p', 'p==', { noremap = true, silent = true })
 -- Split windows management
 vim_keymap_set('n', '<leader>sv', '<CMD>vsp<CR>', { noremap = true, silent = true, desc = '[S]plit [V]ertical' })
 vim_keymap_set('n', '<leader>sh', '<CMD>sp<CR>', { noremap = true, silent = true, desc = '[S]plit [H]orizontal' })
@@ -26,4 +27,5 @@ vim_keymap_set('n', '<leader>oe', vim.diagnostic.open_float, { noremap = true, s
 
 -- Select all
 vim_keymap_set('n', '<C-a>', 'ggVG', { desc = 'Select all' })
--- Move block of text in visual mode
+vim_keymap_set('v', '>', '>gv')
+vim_keymap_set('v', '<', '<gv')
