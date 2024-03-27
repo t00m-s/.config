@@ -6,7 +6,6 @@ vim.defer_fn(function()
     ignore_install = {},
     sync_install = true,
     ensure_installed = { 'vim', 'regex', 'lua', 'bash', 'markdown', 'markdown_inline' },
-
     highlight = {
       enable = true,
       disable = function(lang, buf)

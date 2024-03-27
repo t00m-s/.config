@@ -41,6 +41,7 @@ lsp_zero.on_attach(function(client, bufnr)
     end
     local markdown_lines = vim.lsp.util.convert_input_to_markdown_lines(result.contents)
     markdown_lines = vim.lsp.util.trim_empty_lines(markdown_lines)
+
     if vim.tbl_isempty(markdown_lines) then
       return
     end
@@ -64,10 +65,12 @@ local cmp = require 'cmp'
 local cmp_action = lsp_zero.cmp_action()
 local lspkind = require 'lspkind'
 local cmp_ap = require 'nvim-autopairs.completion.cmp'
+local friendly_snippets = require 'luasnip.loaders.from_vscode'
 cmp.setup {
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
+      friendly_snippets.lazy_load()
     end,
   },
   sources = {
