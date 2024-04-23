@@ -52,7 +52,6 @@
 	export TMUX_POWERLINE_SEG_DATE_FORMAT="%F"
 # }
 
-
 # hostname.sh {
 	# Use short or long format for the hostname. Can be {"short, long"}.
 	export TMUX_POWERLINE_SEG_HOSTNAME_FORMAT="short"

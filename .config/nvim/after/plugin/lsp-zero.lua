@@ -1,6 +1,7 @@
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local lsp_zero = require 'lsp-zero'
+lsp_zero.extend_lspconfig()
 lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set('n', '<leader>gd', function()
     vim.lsp.buf.definition()
@@ -54,6 +55,9 @@ require('mason-lspconfig').setup {
   ensure_installed = {},
   handlers = {
     lsp_zero.default_setup,
+    tsserver = function()
+      require('typescript-tools').setup {}
+    end,
     lua_ls = function()
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)

@@ -54,7 +54,6 @@
       "on-scroll-down": "shift_down",
     },
   },
-
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
@@ -63,7 +62,6 @@
     "on-scroll-down": "brightnessctl set 1%-",
     "min-length": 6,
   },
-
   "battery": {
     "states": {
       "good": 95,

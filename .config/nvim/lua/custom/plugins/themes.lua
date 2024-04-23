@@ -18,7 +18,7 @@ return {
     -- kanagawa-lotus for when you're out in the open.
     'rebelot/kanagawa.nvim',
     config = function()
-      vim.cmd 'colorscheme kanagawa-wave'
+      vim.cmd 'colorscheme kanagawa'
     end,
   },
 }
