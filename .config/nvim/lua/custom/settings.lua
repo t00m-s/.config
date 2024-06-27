@@ -33,7 +33,7 @@ vim.opt.signcolumn = 'yes'
 
 -- List and Match Settings
 vim.opt.list = true
-vim.opt.listchars = { tab = '  ', leadmultispace = '│   ' }
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', leadmultispace = '│   ' }
 vim.opt.showmatch = true
 
 -- GUI and Encoding Settings
@@ -54,3 +54,6 @@ vim.opt.relativenumber = true
 vim.opt.colorcolumn = '80'
 -- Enable break indent
 vim.o.breakindent = true
+
+-- Nerd font management
+vim.g.have_nerd_font = true

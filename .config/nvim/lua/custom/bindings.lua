@@ -5,7 +5,7 @@ vim_keymap_set('n', '<leader>q', ':q<CR>', { noremap = true, silent = true, desc
 vim_keymap_set('n', '<leader>wa', ':wa<CR>', { noremap = true, silent = true, desc = '[W]rite [A]ll' })
 vim_keymap_set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = '[W]rite' })
 vim_keymap_set('n', '<leader>wq', ':wq<CR>', { noremap = true, silent = true, desc = '[W]rite and [Q]uit' })
--- When deleting with x, this does not save to registers
+-- X deletion does not save to register
 vim_keymap_set('n', 'x', '"_x', { noremap = true, silent = true })
 -- Format pasted line
 vim_keymap_set({ 'n' }, 'p', 'p==', { noremap = true, silent = true })
