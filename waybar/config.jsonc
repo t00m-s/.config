@@ -1,0 +1,86 @@
+{
+  "layer": "top",
+  "modules-left": ["temperature", "cpu", "memory", "battery"],
+  "modules-right": ["backlight", "wireplumber", "bluetooth", "clock"],
+  "modules-center": ["hyprland/workspaces", "tray"],
+  "temperature": {
+	"critical-threshold": 80,
+	"format-critical": "{temperatureC}°C ",
+	"format": "{temperatureC}°C "
+  },
+
+  "tray": {
+	  "icon-size": 21,
+	  "spacing": 10
+  },
+
+  "wireplumber": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 {volume}%",
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "default": ["", "", ""]
+    }
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-"
+  },
+
+  "battery": {
+    "states": {
+      "full": 100,
+      "good": 95,
+      "decent": 50,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon}  {capacity}%",
+    "format-time": "{H} h {M} min",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%d-%m-%Y}"
+  },
+
+  "cpu": {
+    "interval": 15,
+    "format": "  {}%",
+    "max-length": 10,
+    "on-click": "kitty -- btop"
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": "  {}%",
+    "max-length": 10
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "active": "",
+    "sort-by-number": true
+  },
+  
+  "reload_style_on_change": true,
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  }
+}
+

@@ -1,0 +1,10 @@
+*
+!*/
+!.gitignore
+!hypr/**
+!waybar/**
+!dunst/**
+!kitty/**
+!wpaperd/**
+!nvim/**
+!install.txt
