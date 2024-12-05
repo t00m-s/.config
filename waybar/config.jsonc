@@ -1,12 +1,13 @@
 {
   "layer": "top",
-  "modules-left": ["temperature", "cpu", "memory", "battery"],
-  "modules-right": ["backlight", "wireplumber", "bluetooth", "clock"],
-  "modules-center": ["hyprland/workspaces", "tray"],
+  "modules-left": ["temperature", "memory", "battery"],
+  "modules-right": ["backlight", "wireplumber", "bluetooth", "clock", "tray"],
+  "modules-center": ["hyprland/workspaces"],
   "temperature": {
 	"critical-threshold": 80,
 	"format-critical": "{temperatureC}°C ",
-	"format": "{temperatureC}°C "
+	"format": "{temperatureC}°C ",
+	"on-click": "kitty -- btop"
   },
 
   "tray": {
@@ -52,13 +53,6 @@
     "format-alt": "{:%d-%m-%Y}"
   },
 
-  "cpu": {
-    "interval": 15,
-    "format": "  {}%",
-    "max-length": 10,
-    "on-click": "kitty -- btop"
-  },
-
   "memory": {
     "interval": 30,
     "format": "  {}%",
@@ -80,7 +74,7 @@
     "format-connected": " {num_connections} connected",
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager",
   }
 }
-
