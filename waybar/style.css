@@ -83,35 +83,6 @@ window#waybar.hidden {
   background: #b5e8e0;
 }
 
-#battery.critical:not(.charging) {
-  background-color: #b5e8e0;
-  color: #161320;
-  animation-name: blink;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes blink {
-  to {
-    background-color: #bf616a;
-    color: #b5e8e0;
-  }
-}
-
-#backlight {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #f8bd96;
-}
-
 #clock {
   margin-top: 6px;
   margin-left: 8px;
@@ -139,19 +110,6 @@ window#waybar.hidden {
   /* default: background: #ddb6f2; */
 }
 
-#cpu {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #b8bb26;
-  /* default: background: #96cdfb; */
-}
-
 #bluetooth {
   margin-top: 6px;
   margin-left: 8px;
@@ -161,17 +119,5 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   background: #0082fc;
-  color: #161320;
-}
-
-#temperature {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  background: #ff6666;
   color: #161320;
 }

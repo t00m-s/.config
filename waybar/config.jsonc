@@ -1,13 +1,8 @@
 {
   "layer": "top",
-  "modules-left": ["temperature", "cpu", "memory", "battery"],
-  "modules-right": ["backlight", "wireplumber", "bluetooth", "clock"],
+  "modules-left": ["memory"],
+  "modules-right": ["wireplumber", "bluetooth", "clock"],
   "modules-center": ["hyprland/workspaces", "tray"],
-  "temperature": {
-	"critical-threshold": 80,
-	"format-critical": "{temperatureC}°C ",
-	"format": "{temperatureC}°C "
-  },
 
   "tray": {
 	  "icon-size": 21,
@@ -25,44 +20,16 @@
     }
   },
 
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"],
-    "on-scroll-up": "brightnessctl set 1%+",
-    "on-scroll-down": "brightnessctl set 1%-"
-  },
-
-  "battery": {
-    "states": {
-      "full": 100,
-      "good": 95,
-      "decent": 50,
-      "warning": 30,
-      "critical": 20
-    },
-    "format": "{icon}  {capacity}%",
-    "format-time": "{H} h {M} min",
-    "format-alt": "{icon} {time}",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip": false
-  },
-
   "clock": {
     "format": "{:%H:%M}",
     "format-alt": "{:%d-%m-%Y}"
   },
 
-  "cpu": {
-    "interval": 15,
-    "format": "  {}%",
-    "max-length": 10,
-    "on-click": "kitty -- btop"
-  },
-
   "memory": {
     "interval": 30,
     "format": "  {}%",
-    "max-length": 10
+    "max-length": 10,
+    "on-click": "kitty -- btop"
   },
 
   "hyprland/workspaces": {
@@ -83,4 +50,3 @@
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
   }
 }
-
