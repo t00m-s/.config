@@ -55,5 +55,27 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "on-click": "blueman-manager",
-  }
+  },
+
+ "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-"
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "full": 100,
+      "good": 80,
+      "decent": 60,
+      "warning": 40,
+      "critical": 20
+    },
+    "format": "{icon}  {capacity}%",
+    "format-time": "{H} h {M} min",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
+  },
 }
