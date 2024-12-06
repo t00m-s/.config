@@ -1,8 +1,14 @@
 {
   "layer": "top",
-  "modules-left": ["memory"],
-  "modules-right": ["wireplumber", "bluetooth", "clock"],
-  "modules-center": ["hyprland/workspaces", "tray"],
+  "modules-left": ["temperature", "memory", "battery"],
+  "modules-right": ["backlight", "wireplumber", "bluetooth", "clock", "tray"],
+  "modules-center": ["hyprland/workspaces"],
+  "temperature": {
+	"critical-threshold": 80,
+	"format-critical": "{temperatureC}°C ",
+	"format": "{temperatureC}°C ",
+	"on-click": "kitty -- btop"
+  },
 
   "tray": {
 	  "icon-size": 21,
@@ -47,6 +53,7 @@
     "format-connected": " {num_connections} connected",
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager",
   }
 }
