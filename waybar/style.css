@@ -99,6 +99,7 @@ window#waybar.hidden {
     color: #b5e8e0;
   }
 }
+
 #backlight {
   margin-top: 6px;
   margin-left: 8px;
@@ -151,7 +152,6 @@ window#waybar.hidden {
 }
 
 #temperature {
-
   margin-top: 6px;
   margin-left: 8px;
   padding-left: 10px;
@@ -166,8 +166,8 @@ window#waybar.hidden {
 #tray {
   margin-top: 6px;
   font-size: 16px;
-  margin-right: 6px;
   font-weight: 500;
+  padding: 6px 6px 6px 6px;
   margin-bottom: 0px;
   border-radius: 10px;
   background: #282828;
