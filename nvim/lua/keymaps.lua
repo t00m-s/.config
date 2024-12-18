@@ -53,7 +53,7 @@ vim.api.nvim_create_autocmd('InsertLeave', {
 })
 
 -- X deletion does not save to register
-vim.keymap.set('n', 'x', '"_x', { noremap = true, silent = true })
+vim.keymap.set('n', 'x', '"_x')
 -- Format pasted line
 vim.keymap.set({ 'n' }, 'p', 'p==', { noremap = true, silent = true })
 
@@ -71,4 +71,9 @@ vim.keymap.set('v', '<', '<gv')
 
 -- Oil
 vim.keymap.set('n', '<leader>pv', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+
+-- Split management
+vim.keymap.set('n', '<leader>sv', '<CMD>vsp<CR>', { noremap = true, silent = true, desc = '[S]plit [V]ertical' })
+vim.keymap.set('n', '<leader>sh', '<CMD>sp<CR>', { noremap = true, silent = true, desc = '[S]plit [H]orizontal' })
+
 -- vim: ts=2 sts=2 sw=2 et

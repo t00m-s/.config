@@ -54,5 +54,12 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
+  checker = {
+    enabled = true,
+  },
+  change_detection = {
+    enabled = false,
+    notify = false,
+  },
 })
 -- vim: ts=2 sts=2 sw=2 et
