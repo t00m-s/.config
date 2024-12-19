@@ -3,7 +3,8 @@
 	"modules-left": [
 		"temperature",
 		"memory",
-		"battery"
+		"battery",
+		"keyboard-state"
 	],
 	"modules-right": [
 		"backlight",
@@ -16,6 +17,15 @@
 	"modules-center": [
 		"hyprland/workspaces"
 	],
+	"keyboard-state": {
+		"numlock": true,
+		"capslock": true,
+		"format": "{name} {icon}",
+		"format-icons": {
+			"locked": "",
+			"unlocked": ""
+		}
+	},
 	"custom/power": {
 		"format": "⏻",
 		"tooltip": false,
