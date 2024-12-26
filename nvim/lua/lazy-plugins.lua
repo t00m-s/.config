@@ -15,7 +15,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart.plugins.gruvbox',
+  require 'kickstart/plugins/gruvbox',
 
   require 'kickstart/plugins/todo-comments',
 

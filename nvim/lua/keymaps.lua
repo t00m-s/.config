@@ -55,7 +55,7 @@ vim.api.nvim_create_autocmd('InsertLeave', {
 -- X deletion does not save to register
 vim.keymap.set('n', 'x', '"_x')
 -- Format pasted line
-vim.keymap.set({ 'n' }, 'p', 'p==', { noremap = true, silent = true })
+vim.keymap.set('n', 'p', 'p==', { noremap = true, silent = true })
 
 -- Space is now only used as a leader key
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { noremap = true, silent = true })
