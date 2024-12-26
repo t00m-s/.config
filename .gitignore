@@ -7,5 +7,5 @@
 !kitty/**
 !wpaperd/**
 !nvim/**
-!tmux/**
+!tmux/tmux.conf
 !install.txt
