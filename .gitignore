@@ -8,4 +8,5 @@
 !wpaperd/**
 !nvim/**
 !tmux/tmux.conf
+!fuzzel/fuzzel.ini
 !install.txt
