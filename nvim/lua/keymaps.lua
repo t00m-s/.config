@@ -65,9 +65,9 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Select all
-vim.keymap.set({ 'n' }, '<C-a>', 'ggVG', { desc = 'Select all' })
-vim.keymap.set('v', '>', '>gv')
-vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('n', '<C-a>', 'ggVG', { desc = 'Select all' })
+vim.keymap.set('v', '<TAB>', '>gv')
+vim.keymap.set('v', '<S-TAB>', '<gv')
 
 -- Oil
 vim.keymap.set('n', '<leader>pv', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
@@ -75,5 +75,5 @@ vim.keymap.set('n', '<leader>pv', '<CMD>Oil<CR>', { desc = 'Open parent director
 -- Split management
 vim.keymap.set('n', '<leader>sv', '<CMD>vsp<CR>', { noremap = true, silent = true, desc = '[S]plit [V]ertical' })
 vim.keymap.set('n', '<leader>sh', '<CMD>sp<CR>', { noremap = true, silent = true, desc = '[S]plit [H]orizontal' })
-
+vim.keymap.set('n', '<C-s>', '<CMD>w<CR>', { noremap = true, silent = true, desc = 'Save file.' })
 -- vim: ts=2 sts=2 sw=2 et
