@@ -2,25 +2,18 @@ return {
   'stevearc/oil.nvim',
   ---@module 'oil'
   ---@type oil.SetupOpts
-  -- Optional dependencies
-  dependencies = {
-    {
-      'echasnovski/mini.icons',
+  opts = {
+    columns = {
+      'icon',
+      'permissions',
+      'size',
     },
+    view_options = {
+      show_hidden = true,
+    },
+    watch_for_changes = true,
   },
+  -- Optional dependencies
+  dependencies = { { 'echasnovski/mini.icons', opts = {} } },
   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
-  config = function()
-    local opts = {
-      columns = {
-        'icon',
-        'permissions',
-        'size',
-      },
-      view_options = {
-        show_hidden = true,
-      },
-      watch_for_changes = true,
-    }
-    require('oil').setup(opts)
-  end,
 }
