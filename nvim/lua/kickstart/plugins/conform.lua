@@ -34,6 +34,7 @@ return {
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         html = { 'prettierd', 'prettier', stop_after_first = true },
         cpp = { 'clang-format' },
+        proto = { 'buf' },
         ['_'] = { 'trim_whitespace' },
       },
     },

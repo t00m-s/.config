@@ -13,6 +13,7 @@ return {
     },
   },
   { 'Bilal2453/luvit-meta', lazy = true },
+  { 'nvim-java/nvim-java' },
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
@@ -137,7 +138,9 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- ruff = {},
+        jdtls = {},
         clangd = {
+          filetypes = { 'cpp', 'c' },
           cmd = {
             'clangd',
             '--background-index',
@@ -190,6 +193,9 @@ return {
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+
+      -- nvim-java
+      require('java').setup()
 
       require('mason-lspconfig').setup {
         handlers = {

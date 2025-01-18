@@ -72,4 +72,5 @@ vim.opt.titlestring = '%t'
 vim.opt.termguicolors = true
 vim.opt.encoding = 'utf-8'
 
+vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 -- vim: ts=2 sts=2 sw=2 et
