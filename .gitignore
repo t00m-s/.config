@@ -3,3 +3,5 @@
 !.gitignore
 !nvim/**
 !tmux/tmux.conf
+!ansible.yml
+!ansible-tasks/arch.yml
