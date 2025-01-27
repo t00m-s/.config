@@ -1,7 +1,7 @@
 *
-!*/
 !.gitignore
 !nvim/**
 !tmux/tmux.conf
+tmux/**
 !ansible.yml
 !ansible-tasks/**
