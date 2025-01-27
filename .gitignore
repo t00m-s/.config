@@ -4,4 +4,4 @@
 !nvim/**
 !tmux/tmux.conf
 !ansible.yml
-!ansible-tasks/arch.yml
+!ansible-tasks/**
