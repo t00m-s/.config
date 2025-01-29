@@ -1,6 +1,0 @@
-- name: Install ZSH Arch
-  community.general.pacman:
-    name: zsh
-    state: present
-  tags:
-    - arch
