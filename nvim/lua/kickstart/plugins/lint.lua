@@ -5,7 +5,7 @@ return { -- Linting
     local lint = require 'lint'
     lint.linters_by_ft = {
       markdown = { 'markdownlint' },
-      python = { 'pylint' },
+      python = { 'ruff' },
       cpp = { 'cpplint' },
     }
 

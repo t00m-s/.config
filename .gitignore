@@ -1,5 +1,5 @@
 *
-!*/
+/*
 !.gitignore
 !hypr/**
 !waybar/**
@@ -8,5 +8,4 @@
 !wpaperd/**
 !nvim/**
 !tmux/tmux.conf
-!fuzzel/fuzzel.ini
-!install.txt
+!fuzzel/**
