@@ -1,201 +1,116 @@
 * {
-  border: none;
-  border-radius: 8;
-  font-family: "Inter Nerd Font";
+  min-height: 0;
+  min-width: 0;
+  font-family: Lexend, "JetBrainsMono NFP";
   font-size: 16px;
-  min-height: 20px;
+  font-weight: 600;
 }
 
 window#waybar {
-  background: transparent;
-}
-
-window#waybar.hidden {
-  opacity: 0.2;
-}
-
-#window {
-  margin-top: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: transparent;
-  background: transparent;
-}
-
-#workspaces {
-  margin-top: 6px;
-  margin-left: 12px;
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  background: #282828;
-  /* default: background: #161320; */
-  transition: none;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  /* background-color: #1e1e2e; */
+  /* background-color: #181825; */
+  background-color: #11111b;
+  /* background-color: rgba(24, 24, 37, 0.6); */
 }
 
 #workspaces button {
-  transition: none;
-  color: #fbf1c7;
-  /* default: color: #b5e8e0; */
-  background: transparent;
-  border-radius: 2px;
-  margin-bottom: 0px;
-}
-
-#workspaces button.active {
-  color: #fe8019;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: #1e1e2e;
+  color: #cdd6f4;
 }
 
 #workspaces button:hover {
-  transition: none;
-  box-shadow: inherit;
-  text-shadow: inherit;
-  color: #d65d0e;
-  border-color: #d65d0e;
-  /* border-color: #e8a2af; */
-  /* color: #e8a2af; */
+  color: #1e1e2e;
+  background-color: #cdd6f4;
 }
 
-#wireplumber {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #1a1826;
-  background: #fae3b0;
+#workspaces button.active {
+  background-color: #1e1e2e;
+  color: #89b4fa;
 }
 
-#battery {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #b5e8e0;
+#workspaces button.urgent {
+  background-color: #1e1e2e;
+  color: #f38ba8;
 }
 
-#battery.critical:not(.charging) {
-  background-color: #b5e8e0;
-  color: #161320;
-  animation-name: blink;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+#clock,
+#pulseaudio,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#window,
+#mpris {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: #1e1e2e;
 }
 
-@keyframes blink {
-  to {
-    background-color: #bf616a;
-    color: #b5e8e0;
-  }
+#mpris.playing {
+  color: #a6e3a1;
 }
 
-#backlight {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #f8bd96;
+#mpris.paused {
+  color: #9399b2;
 }
 
-#clock {
-  margin-top: 6px;
-  margin-left: 8px;
-  margin-right: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #8ec07c;
-  /* default: background: #abe9b3; */
+#custom-sep {
+  padding: 0px;
+  color: #585b70;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#cpu {
+  color: #94e2d5;
 }
 
 #memory {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #fabd2f;
-  /* default: background: #ddb6f2; */
+  color: #cba6f7;
 }
 
-#bluetooth {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  background: #0082fc;
-  color: #161320;
+#clock {
+  color: #74c7ec;
 }
 
-#temperature {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  background: #ff6666;
-  color: #161320;
+#clock.simpleclock {
+  color: #89b4fa;
 }
 
-#tray {
-  margin-top: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 6px 6px 6px 6px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  background: #282828;
-  /* default: background: #161320; */
-  transition: none;
+#window {
+  color: #cdd6f4;
+}
+
+#pulseaudio {
+  color: #b4befe;
+}
+
+#pulseaudio.muted {
+  color: #a6adc8;
+}
+
+#custom-logo {
+  color: #89b4fa;
 }
 
 #custom-power {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  margin-right: 6px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  background: #ff6666;
-  color: #161320;
+  color: #f38ba8;
 }
 
-#keyboard-state {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #928374;
+tooltip {
+  background-color: #181825;
+  border: 2px solid #89b4fa;
 }

@@ -1,8 +1,6 @@
 -- [[ Configure and install plugins ]]
 --
 require('lazy').setup({
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-
   require 'kickstart/plugins/gitsigns',
 
   require 'kickstart/plugins/which-key',
@@ -13,7 +11,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/conform',
 
-  require 'kickstart.plugins.cmp',
+  require 'kickstart/plugins/cmp',
 
   require 'kickstart/plugins/gruvbox',
 
@@ -23,9 +21,9 @@ require('lazy').setup({
 
   require 'kickstart/plugins/treesitter',
 
-  require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.indent_line',
-  require 'kickstart.plugins.lint',
+  require 'kickstart/plugins/debug',
+  require 'kickstart/plugins/indent_line',
+  require 'kickstart/plugins/lint',
 
   { import = 'custom.plugins' },
 }, {
