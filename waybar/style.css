@@ -1,3 +1,4 @@
+@import "mocha.css";
 * {
   min-height: 0;
   min-width: 0;
@@ -9,34 +10,30 @@
 window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
-  /* background-color: #1e1e2e; */
-  /* background-color: #181825; */
-  background-color: #11111b;
-  /* background-color: rgba(24, 24, 37, 0.6); */
+  background-color: @mantle;
 }
 
 #workspaces button {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  /* background-color: #181825; */
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: @mantle;
+  color: @text;
 }
 
 #workspaces button:hover {
-  color: #1e1e2e;
-  background-color: #cdd6f4;
+  color: @mantle;
+  background-color: @text;
 }
 
 #workspaces button.active {
-  background-color: #1e1e2e;
-  color: #89b4fa;
+  background-color: @surface0;
+  color: @blue;
 }
 
 #workspaces button.urgent {
-  background-color: #1e1e2e;
-  color: #f38ba8;
+  background-color: @surface0;
+  color: @red;
 }
 
 #clock,
@@ -50,25 +47,25 @@ window#waybar {
 #memory,
 #window,
 #mpris,
-#temperature {
+#temperature,
+#battery {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  /* background-color: #181825; */
-  background-color: #1e1e2e;
+  background-color: @surface0;
 }
 
 #mpris.playing {
-  color: #a6e3a1;
+  color: @green;
 }
 
 #mpris.paused {
-  color: #9399b2;
+  color: @overlay1;
 }
 
 #custom-sep {
   padding: 0px;
-  color: #585b70;
+  color: @overlay0;
 }
 
 window#waybar.empty #window {
@@ -76,46 +73,69 @@ window#waybar.empty #window {
 }
 
 #cpu {
-  color: #94e2d5;
+  color: @teal;
 }
 
 #temperature {
-  color: #ff9e99;
+  color: @maroon;
 }
 
 #memory {
-  color: #cba6f7;
+  color: @mauve;
 }
 
 #clock {
-  color: #74c7ec;
+  color: @sky;
 }
 
 #clock.simpleclock {
-  color: #89b4fa;
+  color: @blue;
 }
 
 #window {
-  color: #cdd6f4;
+  color: @text;
 }
 
 #pulseaudio {
-  color: #b4befe;
+  color: @lavender;
 }
 
 #pulseaudio.muted {
-  color: #a6adc8;
+  color: @overlay1;
 }
 
 #custom-logo {
-  color: #89b4fa;
+  color: @blue;
 }
 
 #custom-power {
-  color: #f38ba8;
+  color: @red;
+}
+
+#battery {
+  color: @peach;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  to {
+    color: @text;
+  }
 }
 
 tooltip {
-  background-color: #181825;
-  border: 2px solid #89b4fa;
+  background-color: @mantle;
+  border: 2px solid @blue;
 }
