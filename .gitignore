@@ -6,6 +6,5 @@ hypr/monitors.conf
 !dunst/**
 !kitty/**
 !wpaperd/**
-!nvim/**
 !tmux/tmux.conf
 !fuzzel/**
