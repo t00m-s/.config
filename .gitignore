@@ -1,5 +1,7 @@
 *
 !*/
+!dark-mode.d/**
+!light-mode.d/**
 !.gitignore
 !hypr/**
 hypr/monitors.conf
