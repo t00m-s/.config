@@ -6,13 +6,11 @@
   font-size: 16px;
   font-weight: 600;
 }
-
 window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
   background-color: @mantle;
 }
-
 #workspaces button {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
@@ -20,22 +18,18 @@ window#waybar {
   background-color: @mantle;
   color: @text;
 }
-
 #workspaces button:hover {
   color: @mantle;
   background-color: @text;
 }
-
 #workspaces button.active {
   background-color: @surface0;
   color: @blue;
 }
-
 #workspaces button.urgent {
   background-color: @surface0;
   color: @red;
 }
-
 #clock,
 #pulseaudio,
 #custom-logo,
@@ -54,88 +48,74 @@ window#waybar {
   border-radius: 6px;
   background-color: @surface0;
 }
-
 #mpris.playing {
   color: @green;
 }
-
 #mpris.paused {
   color: @overlay1;
 }
-
 #custom-sep {
   padding: 0px;
   color: @overlay0;
 }
-
 window#waybar.empty #window {
   background-color: transparent;
 }
-
 #cpu {
   color: @teal;
 }
-
 #temperature {
   color: @maroon;
 }
-
 #memory {
   color: @mauve;
 }
-
 #clock {
   color: @sky;
 }
-
 #clock.simpleclock {
   color: @blue;
 }
-
 #window {
   color: @text;
 }
-
 #pulseaudio {
   color: @lavender;
 }
-
 #pulseaudio.muted {
   color: @overlay1;
 }
-
 #custom-logo {
   color: @blue;
 }
-
 #custom-power {
   color: @red;
 }
-
 #battery {
   color: @peach;
 }
-
 #battery.charging {
   color: @green;
 }
-
 #battery.warning:not(.charging) {
   color: @yellow;
 }
-
 #battery.critical:not(.charging) {
   color: @red;
   animation: blink 1s linear infinite;
 }
-
 @keyframes blink {
   to {
     color: @text;
   }
 }
-
 tooltip {
-  background-color: @mantle;
+  background-color: @base;
   border: 2px solid @blue;
+  border-radius: 6px;
+}
+tooltip label {
+  color: @text;
+  font-weight: 500;
+  padding: 4px;
 }
