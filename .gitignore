@@ -11,3 +11,4 @@ hypr/monitors.conf
 !wpaperd/**
 !tmux/tmux.conf
 !fuzzel/**
+!zsh/**
