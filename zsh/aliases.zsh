@@ -1,7 +1,7 @@
 alias cat=bat
 alias rcat='\cat'
-alias lg=lazygit
-alias ldo=lazydocker
+alias lg="lazygit"
+alias ldo="lazydocker"
 alias ls='eza $eza_params'
 alias l='eza --git-ignore $eza_params'
 alias ll='eza --all --header --long $eza_params'
@@ -14,6 +14,16 @@ alias cd="z"
 alias p="python3"
 alias d="docker"
 alias dc="docker compose"
+alias dcbuild="docker compose build"
+alias dcdown="docker compose down"
+alias dps='docker ps --format "{{.ID}}  {{.Names}}"'
+dsh() {
+  if [ -n "$1"] then
+    echo "Usage: dsh <id>"
+  else
+    docker exec -it $1 /bin/bash
+  fi
+}
 alias c="clear"
 alias v="nvim"
 alias vim="nvim"
