@@ -14,14 +14,16 @@ alias cd="z"
 alias p="python3"
 alias d="docker"
 alias dc="docker compose"
-alias dcbuild="docker compose build"
-alias dcdown="docker compose down"
+alias dcu="docker compose up -d"
+alias dcb="docker compose build"
+alias dcd="docker compose down"
 alias dps='docker ps --format "{{.ID}}  {{.Names}}"'
 dsh() {
-  if [ -n "$1"] then
-    echo "Usage: dsh <id>"
+  if [ -n "$1" ]; then
+    docker exec -it "$1" /bin/bash
   else
-    docker exec -it $1 /bin/bash
+    echo "Usage: dsh <container-id>"
+    return 1
   fi
 }
 alias c="clear"
