@@ -29,3 +29,4 @@ dsh() {
 alias c="clear"
 alias v="nvim"
 alias vim="nvim"
+eval "$(zoxide init zsh)"

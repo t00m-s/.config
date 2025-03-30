@@ -9,7 +9,7 @@ sed -i 's/^background = .*$/background = "#eff1f5"/' ~/.config/dunst/dunstrc
 sed -i 's/^foreground = .*$/foreground = "#4c4f69"/' ~/.config/dunst/dunstrc
 sed -i '/\[urgency_critical\]/,/^$/ s/^frame_color = .*$/frame_color = "#fe640b"/' ~/.config/dunst/dunstrc
 # Restart dunst
-if pgrep -x "dunst" > /dev/null; then
+if pgrep -x "dunst" >/dev/null; then
     killall dunst
 fi
 uwsm app -- dunst
