@@ -1,9 +1,9 @@
+!.gitignore
 *
+!/*
 !dark-mode.d/**
 !light-mode.d/**
-!.gitignore
 !hypr/**
-hypr/monitors.conf
 !waybar/**
 !swaync/**
 !kitty/**
@@ -11,3 +11,4 @@ hypr/monitors.conf
 !tmux/tmux.conf
 !fuzzel/**
 !zsh/**
+!mako/**

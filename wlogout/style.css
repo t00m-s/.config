@@ -1,0 +1,26 @@
+@import url("latte.css") screen and (prefers-color-scheme: light);
+
+@import url("mocha.css") screen and (prefers-color-scheme: dark);
+#lock {
+  background-image: url("/home/tommaso/.config/wlogout/icons/latte/lock.svg");
+}
+
+#logout {
+  background-image: url("/home/tommaso/.config/wlogout/icons/latte/logout.svg");
+}
+
+#suspend {
+  background-image: url("/home/tommaso/.config/wlogout/icons/latte/suspend.svg");
+}
+
+#hibernate {
+  background-image: url("/home/tommaso/.config/wlogout/icons/latte/hibernate.svg");
+}
+
+#shutdown {
+  background-image: url("/home/tommaso/.config/wlogout/icons/latte/shutdown.svg");
+}
+
+#reboot {
+  background-image: url("/home/tommaso/.config/wlogout/icons/latte/reboot.svg");
+}

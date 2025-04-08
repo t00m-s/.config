@@ -1,0 +1,20 @@
+sort=-time
+layer=overlay
+width=300
+height=300
+margin=10,50
+anchor=top-right
+border-size=2
+max-icon-size=32
+font=Inter 10
+markup=1
+max-history=20
+ignore-timeout=0
+
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#fab387
+progress-color=over #313244
+
+[urgency=high]
+border-color=#fab387
