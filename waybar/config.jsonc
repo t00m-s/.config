@@ -91,7 +91,7 @@
 	},
 	"custom/power": {
 		"tooltip": false,
-		"on-click": "uwsm app -- wleave",
+		"on-click": "wleave",
 		"format": "⏻"
 	}
 }
