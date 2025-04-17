@@ -2,5 +2,7 @@
 set -euxo pipefail
 sed -i 's|@import "mocha.css";|@import "latte.css";|' ~/.config/waybar/style.css
 if pgrep -x "waybar" >/dev/null; then
-    pkill -USR1 waybar
+    pkill -SIGUSR2 waybar
+else
+    waybar &
 fi

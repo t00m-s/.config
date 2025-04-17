@@ -12,6 +12,7 @@ alias lt='eza --tree $eza_params'
 alias tree='eza --tree $eza_params'
 alias cd="z"
 alias p="python3"
+alias g="git"
 alias d="docker"
 alias dc="docker compose"
 alias dcu="docker compose up -d"

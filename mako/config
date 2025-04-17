@@ -12,3 +12,7 @@ max-history=20
 ignore-timeout=0
 default-timeout=5000
 include=/home/tommaso/.config/mako/themes/catppuccin-latte
+[app-name=volume-notifier]
+layer=overlay
+history=0
+anchor=top-center
