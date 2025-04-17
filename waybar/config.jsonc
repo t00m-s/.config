@@ -6,6 +6,7 @@
 	"gtk-layer-shell": true,
 	"passthrough": false,
 	"fixed-center": true,
+	"reload_style_on_change": true,
 	"modules-left": [
 		"hyprland/workspaces",
 	],
