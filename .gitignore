@@ -12,3 +12,5 @@
 !fuzzel/**
 !zsh/**
 !mako/**
+emacs
+nvim
