@@ -1,0 +1,3 @@
+source $ZDOTDIR/exports.zsh
+source $ZDOTDIR/plugins.zsh
+source $ZDOTDIR/aliases.zsh
