@@ -1,6 +1,9 @@
-!.gitignore
 *
-!/*
+!*/
+
+# Keep these specific files and directories
+!.gitignore
+
 !dark-mode.d/**
 !light-mode.d/**
 !hypr/**
@@ -8,9 +11,14 @@
 !swaync/**
 !kitty/**
 !wpaperd/**
+!nvim/**
+!tmux/**
 !tmux/tmux.conf
 !fuzzel/**
+!fuzzel/fuzzel.ini
 !zsh/**
 !mako/**
-emacs
-nvim
+!ansible-tasks/**
+
+/emacs/
+/nvim/
