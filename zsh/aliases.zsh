@@ -1,4 +1,4 @@
-alias cat=bat
+alias cat='bat'
 alias rcat='\cat'
 alias lg="lazygit"
 alias ldo="lazydocker"
@@ -27,6 +27,16 @@ dsh() {
     return 1
   fi
 }
+
+fuck() {
+  if [ -n "$1" ]; then
+    killall -9 $1
+  else
+    echo "Usage: fuck <application>"
+    return 1
+  fi
+}
+alias rm="rm -i"
 alias c="clear"
 alias v="nvim"
 alias vim="nvim"

@@ -3,3 +3,5 @@ if [[ -n "$SSH_CONNECTION" ]]; then
 else
   export EDITOR="nvim"
 fi
+export KUBE_EDITOR="nvim"
+export TERM=xterm-256color
