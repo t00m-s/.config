@@ -59,7 +59,7 @@
 	"cpu": {
 		"format": " {usage}%",
 		"tooltip": true,
-		"interval": 1,
+		"interval": 5,
 		"on-click": "kitty -- btop"
 	},
 	"memory": {
