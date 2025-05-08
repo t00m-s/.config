@@ -2,7 +2,7 @@
 * {
   min-height: 0;
   min-width: 0;
-  font-family: Lexend, "JetBrainsMono NFP";
+  font-family: "JetBrainsMono NFP";
   font-size: 16px;
   font-weight: 600;
 }
@@ -40,7 +40,9 @@ window#waybar {
 #tray,
 #memory,
 #window,
-#mpris {
+#mpris,
+#temperature,
+#battery {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
@@ -61,6 +63,9 @@ window#waybar.empty #window {
 }
 #cpu {
   color: @teal;
+}
+#temperature {
+  color: @maroon;
 }
 #memory {
   color: @mauve;
@@ -85,6 +90,24 @@ window#waybar.empty #window {
 }
 #custom-power {
   color: @red;
+}
+#battery {
+  color: @peach;
+}
+#battery.charging {
+  color: @green;
+}
+#battery.warning:not(.charging) {
+  color: @yellow;
+}
+#battery.critical:not(.charging) {
+  color: @red;
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  to {
+    color: @text;
+  }
 }
 tooltip {
   background-color: @base;
