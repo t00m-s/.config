@@ -1,7 +1,5 @@
 *
 !*/
-
-# Keep these specific files and directories
 !.gitignore
 
 !dark-mode.d/**
