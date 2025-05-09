@@ -5,3 +5,4 @@ else
 fi
 export KUBE_EDITOR="nvim"
 export TERM=xterm-256color
+export GNUPGHOME="$HOME/.private/.gpg"
