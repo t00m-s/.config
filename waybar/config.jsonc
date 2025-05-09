@@ -62,7 +62,7 @@
 		"format": " {usage}%",
 		"tooltip": true,
 		"interval": 1,
-		"on-click": "kitty -- btop"
+		"on-click": "ghostty -e btop"
 	},
 	"temperature": {
 		"format": " {temperatureC}°C",
