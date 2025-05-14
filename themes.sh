@@ -89,3 +89,11 @@ git clone https://github.com/catppuccin/waybar.git
 cd /tmp/waybar/themes
 cp latte.css $XDG_CONFIG_HOME/waybar
 cp mocha.css $XDG_CONFIG_HOME/waybar
+
+# SDDM
+cd /tmp
+wget https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip
+wget https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-latte.zip
+mkdir -p /usr/share/sddm/themes/
+unzip catppuccin-mocha.zip -d /usr/share/sddm/themes/  
+unzip catppuccin-latte.zip -d /usr/share/sddm/themes/
