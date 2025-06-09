@@ -1,5 +1,5 @@
 {
-	"layer": "bottom",
+	"layer": "top",
 	"position": "bottom",
 	"spacing": 2,
 	"exclusive": true,
@@ -12,14 +12,14 @@
 	],
 	"modules-center": [
 		"mpris",
-		"battery"
+		"pulseaudio",
+		"clock#simpleclock",
 	],
 	"modules-right": [
 		"cpu",
 		"temperature",
 		"memory",
-		"pulseaudio",
-		"clock#simpleclock",
+		"battery",
 		"tray",
 		"custom/power"
 	],
@@ -62,11 +62,11 @@
 		"format": " {usage}%",
 		"tooltip": true,
 		"interval": 1,
-		"on-click": "kitty -- btop"
+		"on-click": "ghostty -e btop"
 	},
 	"temperature": {
 		"format": " {temperatureC}°C",
-		"on-click": "kitty -- btop",
+		// "hwmon-path": "/sys/class/hwmon/hwmon4/temp3_input",
 		"tooltip": false,
 		"interval": 1
 	},
