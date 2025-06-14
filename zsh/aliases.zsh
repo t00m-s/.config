@@ -1,4 +1,5 @@
 alias cat='bat'
+alias man='tldr'
 alias rcat='\cat'
 alias lg="lazygit"
 alias ldo="lazydocker"
@@ -9,7 +10,6 @@ alias llm='eza --all --header --long --sort=modified $eza_params'
 alias la='eza -lbhHigUmuSa'
 alias lx='eza -lbhHigUmuSa@'
 alias lt='eza --tree $eza_params'
-alias tree='eza --tree $eza_params'
 alias cd="z"
 alias p="python3"
 alias g="git"
@@ -40,4 +40,5 @@ alias rm="rm -i"
 alias c="clear"
 alias v="nvim"
 alias vim="nvim"
+alias ctf="source $HOME/ctf-venv/bin/activate"
 eval "$(zoxide init zsh)"
