@@ -36,6 +36,7 @@ fuck() {
     return 1
   fi
 }
+alias ctf="source $HOME/ctf/bin/activate"
 alias rm="rm -i"
 alias c="clear"
 alias v="nvim"
