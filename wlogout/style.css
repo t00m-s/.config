@@ -1,6 +1,5 @@
-@import url("latte.css") screen and (prefers-color-scheme: light);
+@import "latte.css";
 
-@import url("mocha.css") screen and (prefers-color-scheme: dark);
 #lock {
   background-image: url("/home/tommaso/.config/wlogout/icons/latte/lock.svg");
 }
