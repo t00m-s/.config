@@ -22,3 +22,9 @@ tmux/plugins/
 /emacs/
 /nvim/
 JetBrains/
+dolphinrc
+mimeapps.list
+tmux/plugins/tmux-gruvbox
+tmux/plugins/tmux-session-wizard
+tmux/plugins/vim-tmux-navigator
+tmux/plugins/tmux
