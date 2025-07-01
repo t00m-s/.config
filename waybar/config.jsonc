@@ -1,6 +1,6 @@
 {
-	"layer": "bottom",
-	"position": "top",
+	"layer": "top",
+	"position": "bottom",
 	"spacing": 2,
 	"exclusive": true,
 	"gtk-layer-shell": true,
@@ -8,12 +8,11 @@
 	"fixed-center": true,
 	"reload_style_on_change": true,
 	"modules-left": [
-		"hyprland/workspaces",
+		"clock#simpleclock"
 	],
 	"modules-center": [
-		"mpris",
-		"pulseaudio",
-		"clock#simpleclock",
+		"hyprland/workspaces",
+		"mpris"
 	],
 	"modules-right": [
 		"cpu",
@@ -66,17 +65,16 @@
 	},
 	"temperature": {
 		"format": " {temperatureC}°C",
-		"hwmon-path": "/sys/class/hwmon/hwmon4/temp3_input",
+		"hwmon-path": "/sys/class/hwmon/hwmon5/temp3_input",
 		"tooltip": false,
 		"interval": 1
 	},
 	"temperature#gpu": {
 	    "format": " GPU {temperatureC}°C",
-	    "on-click": "lact",
+		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
 	    "tooltip": false,
-	    "interval": 1,
-	    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input"
-},
+	    "interval": 1
+	},
 	"memory": {
 		"format": " {used:0.1f}G"
 	},
