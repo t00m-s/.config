@@ -23,7 +23,7 @@ Rectangle {
             else if (Battery.capacity <= 60) icon = "󰁿"
             else if (Battery.capacity <= 80) icon = "󰂁"
 
-            const symbol = Battery.status === "Charging" ? "🔌" : icon
+            const symbol = Battery.status === "Charging" ? "🔌" : ""
             return `${symbol} ${Battery.capacity}%`
         }
     }
