@@ -10,6 +10,7 @@ Rectangle {
 	border.width: 2
 
 	Text {
+		font.family: "FiraCode Nerd Font"
 		id: dateText
 		anchors.centerIn: parent
 		color: "#ffffff"

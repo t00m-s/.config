@@ -17,12 +17,12 @@ Repeater {
                     onClicked: modelData.activate()
 
                     Text {
+                        font.family: "FiraCode Nerd Font"
                         id: workspaceID
                         text: modelData.id
                         anchors.centerIn: parent
                         color: modelData.active ? "#ffffff" : "#cccccc"
                         font.pixelSize: 12
-                        font.family: "sans-serif"
                     }
                 }
             }
