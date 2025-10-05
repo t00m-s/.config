@@ -2,6 +2,7 @@
 !*/
 !.gitignore
 
+!quickshell/**
 !dark-mode.d/**
 !light-mode.d/**
 !hypr/**
