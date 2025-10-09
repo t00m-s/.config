@@ -23,13 +23,15 @@ PanelWindow {
         // Workspaces Hyprland
         WorkspacesWidget { Layout.alignment: Qt.AlignVCenter }
 
-        // Center spacer
+        // Left center spacer
+        Item { Layout.fillWidth: true }
+        // Date 
+        DateWidget { Layout.alignment: Qt.AlignVCenter }
+        // Right center spacer
         Item { Layout.fillWidth: true }
 
         // System tray
         TrayWidget { Layout.alignment: Qt.AlignVCenter }
-        // Date 
-        DateWidget { Layout.alignment: Qt.AlignVCenter }
         // Battery
         BatteryWidget { Layout.alignment: Qt.AlignVCenter }
         // Right margin spacer

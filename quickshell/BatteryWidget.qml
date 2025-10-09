@@ -6,7 +6,7 @@ Rectangle {
     width: batteryText.implicitWidth + 20
     height: batteryText.implicitHeight + 10
     radius: 10
-    color: Battery.status === "Charging" ? "#4a9eff" : "#123456"
+    color: Battery.status === "Charging" ? "#4a9eff" : "#333333"
     border.color: "#555555"
     border.width: 2
 
@@ -23,7 +23,7 @@ Rectangle {
             else if (Battery.capacity <= 60) icon = "󰁿"
             else if (Battery.capacity <= 80) icon = "󰂁"
 
-            const symbol = Battery.status === "Charging" ? "🔌" : ""
+            const symbol = Battery.status === "Charging" ? "🔌" : icon
             return `${symbol} ${Battery.capacity}%`
         }
     }
