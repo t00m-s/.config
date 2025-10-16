@@ -1,0 +1,4 @@
+[modules]
+left = [ "Workspaces" ]
+center = [ "Clock" ]
+right = [ [ "Privacy", "Settings" ] ]

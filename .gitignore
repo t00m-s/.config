@@ -2,7 +2,7 @@
 !*/
 !.gitignore
 
-!quickshell/**
+!ashell/**
 !alacritty/**
 !dark-mode.d/**
 !light-mode.d/**
