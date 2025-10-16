@@ -2,3 +2,5 @@
 left = [ "Workspaces" ]
 center = [ "Clock" ]
 right = [ [ "Privacy", "Settings" ] ]
+[appearance]
+font_name = "Fira Code Nerd Font"
