@@ -37,8 +37,13 @@ fuck() {
   fi
 }
 alias rm="rm -i"
+alias cp='cp -i'
+alias mv='mv -i'
+alias ln='ln -i'
 alias c="clear"
 alias v="nvim"
 alias vim="nvim"
-alias ctf="source $HOME/ctf-venv/bin/activate"
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
 eval "$(zoxide init zsh)"
