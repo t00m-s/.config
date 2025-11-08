@@ -13,7 +13,7 @@
 !wpaperd/**
 !nvim/**
 !tmux/**
-tmux/plugins/
+tmux/plugins/**
 !tmux/tmux.conf
 !fuzzel/**
 !fuzzel/fuzzel.ini
@@ -26,8 +26,5 @@ tmux/plugins/
 JetBrains/
 dolphinrc
 mimeapps.list
-tmux/plugins/tmux-gruvbox
-tmux/plugins/tmux-session-wizard
-tmux/plugins/vim-tmux-navigator
-tmux/plugins/tmux
 zsh/.zshenv
+zsh/plugins.zsh.zwc
