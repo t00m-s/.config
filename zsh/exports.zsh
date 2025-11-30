@@ -7,3 +7,4 @@ export KUBE_EDITOR="nvim"
 export TERM=xterm-256color
 export GNUPGHOME="$HOME/.private/.gpg"
 export DEBUGINFOD_URLS=https://debuginfod.archlinux.org
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
