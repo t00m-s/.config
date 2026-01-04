@@ -19,7 +19,7 @@ alias dcu="docker compose up -d"
 alias dcb="docker compose build"
 alias dcd="docker compose down"
 alias dps='docker ps --format "{{.ID}}  {{.Names}}"'
-dsh() {
+function dsh() {
   if [ -n "$1" ]; then
     docker exec -it "$1" /bin/bash
   else
@@ -28,7 +28,7 @@ dsh() {
   fi
 }
 
-fuck() {
+function fuck() {
   if [ -n "$1" ]; then
     killall -9 $1
   else
@@ -36,14 +36,32 @@ fuck() {
     return 1
   fi
 }
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+function bak() {
+  if [ -n "$1" ]; then
+    cp $1 $1.bak
+  else
+    echo "Usage: bak <file>"
+    return 1
+  fi
+}
+
 alias rm="rm -i"
 alias cp='cp -i'
 alias mv='mv -i'
 alias ln='ln -i'
-alias c="clear"
-alias v="nvim"
-alias vim="nvim"
+alias vi="nvim"
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
+alias diocan="clear"
+alias sudoedit="doas nvim"
 eval "$(zoxide init zsh)"

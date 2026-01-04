@@ -1,4 +1,4 @@
-include=~/Themes/mako/catppuccin-macchiato-peach
+include=/home/tommaso/Themes/mako/dark
 sort=-time
 layer=overlay
 background-color=#2e3440
